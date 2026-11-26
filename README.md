@@ -46,12 +46,20 @@ em massa ou qualquer função que dê vantagem acadêmica.
 
 ## Instalação passo a passo
 
+Primeiro confira a versão do Python: o projeto funciona com **3.11, 3.12 ou 3.13** (versões mais novas ainda não
+têm todas as dependências prontas). Se `python --version` mostrar outra versão, instale uma dessas e use-a nos comandos
+abaixo (no Windows, o comando `py -0` lista as versões instaladas).
+
 ```bash
 git clone <endereço deste repositório>.git     # o mesmo endereço da página do GitHub onde você está lendo isto
 cd portal-estudante
-python -m venv .venv
-# Windows:            .venv\Scripts\activate
-# macOS / Linux:      source .venv/bin/activate
+# crie o ambiente com uma versão suportada:
+#   Windows:        py -3.12 -m venv .venv
+#   macOS / Linux:  python3.12 -m venv .venv
+# ative o ambiente (a partir daqui, "python" é o do ambiente):
+#   Windows:        .venv\Scripts\activate
+#   macOS / Linux:  source .venv/bin/activate
+python --version                               # deve mostrar 3.11, 3.12 ou 3.13
 python -m pip install --upgrade pip
 python -m pip install -e .
 python -m playwright install chromium

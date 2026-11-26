@@ -295,3 +295,9 @@ def test_pacing_is_fixed_in_code() -> None:
 def test_user_agent_is_neutral() -> None:
     import portal_estudante.session as session_mod
     assert session_mod.USER_AGENT.startswith("portal-estudante/") and "Mozilla" not in session_mod.USER_AGENT
+
+
+def test_check_includes_roster_only_with_opt_in() -> None:
+    names_default = [n for n, _ in PortalClient(http=make_http()).read_checks()]
+    names_opt_in = [n for n, _ in PortalClient(http=make_http(), classmates=True).read_checks()]
+    assert "members" not in names_default and "members" in names_opt_in

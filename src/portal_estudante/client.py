@@ -450,6 +450,8 @@ class PortalClient:
         for name, fn in (("grades", self.grades), ("lessons", self.lessons), ("materials", self.materials),
                          ("communication_categories", self.communication_categories)):
             checks.append((name, lambda fn=fn: fn(main_discipline())))
+        if self.classmates:  # opt-in only (other students' data)
+            checks.append(("members", lambda: self.members(main_discipline())))
         checks += [("activities", self.activities), ("teachers", self.teachers), ("announcements", self.announcements),
                    ("notifications_summary", self.notifications_summary), ("notifications", self.notifications),
                    ("notification_categories", self.notification_categories), ("commitments", self.commitments),

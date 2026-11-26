@@ -3,7 +3,7 @@
 **Cliente não oficial, em Python, compatível com o portal acadêmico Ulife.** Permite consultar pelo código o que você já
 vê no portal com a sua própria conta.
 
-> ## ⚠️ Aviso de isenção de responsabilidade — leia antes de usar
+> **⚠️ Aviso de isenção de responsabilidade — leia antes de usar**
 >
 > - **Projeto NÃO OFICIAL.** Não tem qualquer vínculo, afiliação, patrocínio ou aprovação da Ânima Educação, da Unisul,
 >   do Ulife ou de qualquer instituição de ensino. Os nomes e marcas citados pertencem aos seus titulares e aparecem
@@ -17,7 +17,7 @@ vê no portal com a sua própria conta.
 >   terceiros, para fins acadêmicos desonestos, para envio em massa de mensagens ou para sobrecarregar o portal.
 > - **O projeto sai do ar se a instituição pedir.**
 
-## Cuidados de segurança (em linguagem simples)
+## Cuidados de segurança
 
 - Suas credenciais ficam **só no seu computador**. Por padrão a senha **não é guardada**: você a digita na página
   oficial de login, como faria no navegador.

@@ -1,0 +1,29 @@
+[project]
+name = "portal-estudante"
+version = "0.1.0"
+description = "Cliente não oficial, em Python, compatível com o portal acadêmico Ulife (somente leitura por padrão)."
+license = "Apache-2.0"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "httpx>=0.28",
+    "playwright>=1.65",
+    "keyring>=25.7",
+    "websockets>=15",
+    "cryptography>=45",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=9", "respx>=0.23"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/portal_estudante"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
+addopts = "-q"
+
